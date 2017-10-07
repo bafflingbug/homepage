@@ -14,6 +14,7 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import '../../common/css/font-awesome.css'
   export default {
     name: 'hometext'
   }
@@ -23,6 +24,7 @@
   .content {
     text-align: center;
     z-index: 100;
+    margin-bottom: 15vh;
     margin-bottom: 15vh;
   }
 

@@ -28,7 +28,11 @@
   .infobar {
     text-align: center;
     position: fixed;
-    bottom: 3vh;
+    bottom: 2%;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    bottom: 2%;
   }
 
   .info {
