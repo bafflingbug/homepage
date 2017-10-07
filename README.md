@@ -31,6 +31,8 @@ npm run build --report
     - `myWebSite`: 本站地址
     - `ICP`: 网站备案号，没有可忽略
 
+  - **注意:在links中使用图标时仅需要在数组的第三个(links > link[2])输入class中该填入字符串 例如:github图标仅需输入字符串"fa-github"**
+
 - ### 替换logo以及背景图片
   - 替换**static/img**里面的相应内容
 
