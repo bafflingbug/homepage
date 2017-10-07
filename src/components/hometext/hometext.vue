@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="title">
-      <img class="logo" src="./logo-b.png">
+      <img class="logo" src="../../../static/img/logo.png">
       <div class="description">{{ this.$parent.title }}</div>
     </div>
     <div class="links">
