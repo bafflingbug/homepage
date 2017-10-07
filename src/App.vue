@@ -7,15 +7,16 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import background from './components/background/background.vue'
-  import hometext from './components/hometext/hometext.vue'
-  import info from './components/infobar/infobar.vue'
+  import background from 'components/background/background.vue'
+  import hometext from 'components/hometext/hometext.vue'
+  import info from 'components/infobar/infobar.vue'
   export default {
     data: function () {
       return {
         title: '莫名其妙DeBUG',
         links: [
           ['BLOG', 'https://blog.bafflingbug.cn/'],
+          ['TIEBASIGN', 'https://yun.bafflingbug.cn/'],
           ['ZHIHU', 'https://www.zhihu.com/people/godInZHIHU/'],
           ['GITHUB', 'https://github.com/bafflingbug/'],
           ['GITEE', 'https://gitee.com/bafflingbug/'],
