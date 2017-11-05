@@ -5,7 +5,7 @@
       <div class="description">{{ this.$parent.title }}</div>
     </div>
     <div class="links">
-      <a v-for="link in this.$parent.links" :href="link[1]">
+      <a v-for="(link,index) in this.$parent.links" :key="index" :href="link[1]">
         <i v-if="link[2]" class="fa" aria-hidden="true" :class="link[2]"></i>
         {{ link[0] }}
       </a>

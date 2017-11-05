@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div id="app" class="main">
     <v-background></v-background>
     <v-hometext></v-hometext>
