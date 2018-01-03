@@ -30,6 +30,9 @@
       'v-background': background,
       'v-hometext': hometext,
       'v-info': info
+    },
+    mounted: function () {
+      document.title = this.title
     }
   }
 </script>
