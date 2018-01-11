@@ -1,0 +1,10 @@
+{
+  "title": "Title",
+  "links": [
+    ["blog", "https://blog.example.com/"],
+    ["author github", "https://github.com/bafflingbug/"],
+    ["author mail", "Mailto:i@bafflingbug.cn"]
+  ],
+  "myWebSite": "https://www.example.com/",
+  "ICP": ""
+}

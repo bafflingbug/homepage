@@ -1,30 +1,24 @@
 <template>
-  <div id="app" class="main">
+  <div id='app' class='main'>
     <v-background></v-background>
-    <v-hometext :title="title" :links="links"></v-hometext>
-    <v-info :title="title" :myWebSite="myWebSite" :ICP="ICP"></v-info>
+    <v-hometext :title='title' :links='links'></v-hometext>
+    <v-info :title='title' :myWebSite='myWebSite' :ICP='ICP'></v-info>
   </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script type='text/ecmascript-6'>
   import background from 'components/background/background.vue'
   import hometext from 'components/hometext/hometext.vue'
   import info from 'components/infobar/infobar.vue'
+  import axios from 'axios'
   export default {
     name: 'App',
     data: function () {
       return {
-        title: '莫名其妙DeBUG',
-        links: [
-          ['BLOG', 'https://blog.bafflingbug.cn/'],
-          ['TIEBASIGN', 'https://yun.bafflingbug.cn/'],
-          ['ZHIHU', 'https://www.zhihu.com/people/godInZHIHU/'],
-          ['GITHUB', 'https://github.com/bafflingbug/'],
-          ['GITEE', 'https://gitee.com/bafflingbug/'],
-          ['MAIL', 'Mailto:i@bafflingbug.cn']
-        ],
-        myWebSite: 'https://www.bafflingbug.cn/',
-        ICP: '京ICP备16026454号'
+        title: null,
+        links: [null],
+        myWebSite: null,
+        ICP: null
       }
     },
     components: {
@@ -33,7 +27,14 @@
       'v-info': info
     },
     mounted: function () {
-      document.title = this.title
+      let vdata = this.$data
+      axios.get('/api/config.json').then(function (res) {
+        vdata.title = res.data.title
+        vdata.links = res.data.links
+        vdata.myWebSite = res.data.myWebSite
+        vdata.ICP = res.data.ICP
+        document.title = vdata.title
+      })
     }
   }
 </script>
@@ -41,7 +42,7 @@
 <style>
   .main {
     background-color: #14407E;
-    background-image: url("../static/img/bg.png");
+    background-image: url('../static/img/bg.png');
     background-repeat: repeat;
     background-position: center center;
     background-size: cover;

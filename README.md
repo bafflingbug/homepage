@@ -22,18 +22,15 @@ npm run build
 npm run build --report
 ```
 
-## 构建你的主页
-- ### 替换文本
-  - 在**src/App.vue**文件中替换data的内容为你想要的值
-
-    - `title`: 标题
-    - `links`: 链接列表:每一个链接为一个字符串数组,数组第一个是显示的内容,第二个是链接,第三个是图标的标签(使用Font Awesome)
+## 如何使用
+1. 前往[release](https://github.com/bafflingbug/homepage/releases)下载最新的已发布版本(v2.0+)
+2. 修改`/api/config.json`
+    - `title`: 网站标题
+    - `links`: 链接列表:每一个链接为一个字符串数组,数组第一个是显示的内容,第二个是链接,第三个是图标的标签(使用[Font Awesome](http://fontawesome.io/))
     - `myWebSite`: 本站地址
-    - `ICP`: 网站备案号，没有可忽略
-
-  - **注意:在links中使用图标时仅需要在数组的第三个(links > link[2])输入class中该填入字符串 例如:github图标仅需输入字符串"fa-github"**
-
-- ### 替换logo以及背景图片
-  - 替换**static/img**里面的相应内容
-
-- **替换以后需要重新build**
+    - `ICP`: 网站备案号，没有请保持默认
+3. 替换`/static/img`中的`bg.XXXXX.png`、`logo.png`、`favicon.ico`
+    - `bg.XXXXX.png`: 背景图片
+    - `logo.png`: 网站图标
+    - `favicon.ico`: 网站头像
+4. 使用[nginx](http://nginx.org/)或[Apache](http://httpd.apache.org/)等架设服务器
