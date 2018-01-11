@@ -1,8 +1,8 @@
 <template>
   <div id="app" class="main">
     <v-background></v-background>
-    <v-hometext></v-hometext>
-    <v-info></v-info>
+    <v-hometext :title="title" :links="links"></v-hometext>
+    <v-info :title="title" :myWebSite="myWebSite" :ICP="ICP"></v-info>
   </div>
 </template>
 
@@ -11,6 +11,7 @@
   import hometext from 'components/hometext/hometext.vue'
   import info from 'components/infobar/infobar.vue'
   export default {
+    name: 'App',
     data: function () {
       return {
         title: '莫名其妙DeBUG',

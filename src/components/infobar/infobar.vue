@@ -2,9 +2,9 @@
   <div id="info" class="infobar">
     <span class="info">
       {{ this.text }}
-      <a :href="this.$parent.myWebSite">{{ this.$parent.title }}</a>
-      <span v-if="this.$parent.ICP"> | </span>
-      <a v-if="this.$parent.ICP" href="http://www.miitbeian.gov.cn">{{ this.$parent.ICP }}</a>
+      <a :href="this.myWebSite">{{ this.title }}</a>
+      <span v-if="this.ICP"> | </span>
+      <a v-if="this.ICP" href="http://www.miitbeian.gov.cn">{{ this.ICP }}</a>
     </span>
   </div>
 </template>
@@ -12,6 +12,7 @@
 <script>
   export default {
     name: 'info',
+    props: ['title', 'myWebSite', 'ICP'],
     data: function () {
       return {
         text: ''

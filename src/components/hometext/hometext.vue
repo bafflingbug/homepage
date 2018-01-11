@@ -2,10 +2,10 @@
   <div class="content">
     <div class="title">
       <img class="logo" src="static/img/logo.png">
-      <div class="description">{{ this.$parent.title }}</div>
+      <div class="description">{{ this.title }}</div>
     </div>
     <div class="links">
-      <a v-for="(link,index) in this.$parent.links" :key="index" :href="link[1]">
+      <a v-for="(link,index) in this.links" :key="index" :href="link[1]">
         <i v-if="link[2]" class="fa" aria-hidden="true" :class="link[2]"></i>
         {{ link[0] }}
       </a>
@@ -16,7 +16,8 @@
 <script type="text/ecmascript-6">
   import '../../common/css/font-awesome.css'
   export default {
-    name: 'hometext'
+    name: 'hometext',
+    props: ['title', 'links']
   }
 </script>
 
