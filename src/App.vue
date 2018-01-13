@@ -1,12 +1,12 @@
 <template>
-  <div id='app' class='main'>
+  <div id="app" class="main">
     <v-background></v-background>
-    <v-hometext :title='title' :links='links'></v-hometext>
-    <v-info :title='title' :myWebSite='myWebSite' :ICP='ICP'></v-info>
+    <v-hometext :title="title" :links="links"></v-hometext>
+    <v-info :title="title" :myWebSite="myWebSite" :ICP="ICP"></v-info>
   </div>
 </template>
 
-<script type='text/ecmascript-6'>
+<script type="text/ecmascript-6">
   import background from 'components/background/background.vue'
   import hometext from 'components/hometext/hometext.vue'
   import info from 'components/infobar/infobar.vue'
@@ -28,7 +28,7 @@
     },
     mounted: function () {
       let vdata = this.$data
-      axios.get('/api/config.json').then(function (res) {
+      axios.get('/api/config.json?r=' + new Date().getTime()).then(function (res) {
         vdata.title = res.data.title
         vdata.links = res.data.links
         vdata.myWebSite = res.data.myWebSite
@@ -42,12 +42,12 @@
 <style>
   .main {
     background-color: #14407E;
-    background-image: url('../static/img/bg.png');
+    background-image: url("../static/img/bg.png");
     background-repeat: repeat;
     background-position: center center;
     background-size: cover;
     color: #6289ad;
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 100;
     height: 100vh;
     margin: 0;
