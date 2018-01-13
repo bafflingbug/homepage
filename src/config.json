@@ -2,8 +2,8 @@
   "title": "Title",
   "links": [
     ["blog", "https://blog.example.com/"],
-    ["author github", "https://github.com/bafflingbug/"],
-    ["author mail", "Mailto:i@bafflingbug.cn"]
+    ["author github", "https://github.com/bafflingbug/", "fa-github"],
+    ["author mail", "Mailto:i@bafflingbug.cn", "fa-envelope-o"]
   ],
   "myWebSite": "https://www.example.com/",
   "ICP": ""
