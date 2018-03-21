@@ -16,7 +16,7 @@
     data: function () {
       return {
         title: null,
-        links: [null],
+        links: null,
         myWebSite: null,
         ICP: null
       }
@@ -26,7 +26,7 @@
       'v-hometext': hometext,
       'v-info': info
     },
-    mounted: function () {
+    created: function () {
       let vdata = this.$data
       axios.get('/api/config.json?r=' + new Date().getTime()).then(function (res) {
         vdata.title = res.data.title

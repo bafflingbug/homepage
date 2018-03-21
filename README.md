@@ -34,3 +34,21 @@ npm run build --report
     - `logo.png`: 网站图标
     - `favicon.ico`: 网站头像
 4. 使用[nginx](http://nginx.org/)或[Apache](http://httpd.apache.org/)等架设服务器
+
+
+## 启用Gzip
+在/usr/local/nginx/conf/nginx.conf添加以下代码
+``` conf
+http {
+    gzip on;
+    gzip_static on;
+    gzip_min_length  1k;
+    gzip_buffers     4 16k;
+    gzip_http_version 1.1;
+    gzip_comp_level 4;
+    gzip_types text/css text/xml text/plain image/jpeg image/png image/gif image/x-icon image/svg+xml image/x-ms-bmp image/tiff application/javascript application/font-woff application/json application/pdf application/vnd.ms-fontobject audio/mpeg;
+    gzip_vary on;
+    gzip_disable "MSIE [1-6].";
+}
+```
+gzip_static需要指定 --with-http_gzip_static_module编译选项
