@@ -42,7 +42,7 @@
 <style>
   .main {
     background-color: #14407E;
-    background-image: url("../static/img/bg.png");
+    background-image: url("../static/img/bg.jpg");
     background-repeat: repeat;
     background-position: center center;
     background-size: cover;
